@@ -16,7 +16,7 @@ $ npm install grunt grunt-jsforce-deploy --save-dev
 ### Project Directory
 
 ```
-├── Gruntfile.coffee
+├── Gruntfile.js
 ├── package.json
 └── pkg
     ├── classes
@@ -26,29 +26,35 @@ $ npm install grunt grunt-jsforce-deploy --save-dev
     └── staticresources
 ```
 
-### Gruntfile.coffee
+### Gruntfile.js
 
-```coffeescript
-module.exports = (grunt) ->
+```javascript
+module.exports = function(grunt) {
 
-  grunt.loadNpmTasks "grunt-jsforce-deploy"
+  grunt.loadNpmTasks("grunt-jsforce-deploy");
 
-  grunt.initConfig
-    jsforce_deploy:
-      test:
-        expand: true
-        cwd: "."
+  grunt.initConfig({
+
+    jsforce_deploy: {
+      test: {
+        expand: true,
+        cwd: ".",
         src: [ "pkg/**" ]
-      options:
-        username: process.env.SF_USERNAME
-        password: process.env.SF_PASSWORD
-#        loginUrl: "https://test.salesforce.com"
-#        logLevel: 'DEBUG'
-#        pollTimeout: 120*1000  # override polling timeout to 120sec (default is 60sec)
-#        pollInterval: 10*1000  # override polling interval to 10sec (default is 5sec)
+      },
+      options: {
+        username: process.env.SF_USERNAME,
+        password: process.env.SF_PASSWORD,
+//        loginUrl: "https://test.salesforce.com",
+//        pollTimeout: 120*1000,  // set polling timeout to 120sec (default is 60sec)
+//        pollInterval: 10*1000,  // set polling interval to 10sec (default is 5sec)
+      }
+    }
+    
+  });
 
-  grunt.registerTask "deploy", [ "jsforce_deploy" ]
+  grunt.registerTask("deploy", [ "jsforce_deploy" ]);
 
+};
 ```
 
 ### Deploy
