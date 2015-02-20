@@ -34,7 +34,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jsforce_deploy: {
-      test: {
+      pkg: {
         expand: true,
         cwd: ".",
         src: [ "pkg/**" ]
