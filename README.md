@@ -59,3 +59,8 @@ module.exports = function(grunt) {
 $ SF_USERNAME=username@example.com SF_PASSWORD=yourpassword grunt deploy
 ```
 
+or if you have `foreman` installed, create `.env` file with above credential information, and execute :
+
+```
+$ foreman run grunt deploy
+```
