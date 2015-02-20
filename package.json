@@ -1,0 +1,29 @@
+{
+  "name": "grunt-jsforce-deploy",
+  "version": "1.0.0",
+  "description": "Salesforce package deploying tool using jsforce, no need to install migration tool",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "grunt deploy",
+    "test": "mocha test/jsforce-deploy.test.js --require intelli-espower-loader"
+  },
+  "author": "Shinichi Tomita <shinichi.tomita@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^0.14.3",
+    "jsforce": "^1.4.0"
+  },
+  "devDependencies": {
+    "espower-loader": "^0.10.0",
+    "grunt": "^0.4.5",
+    "intelli-espower-loader": "^0.6.0",
+    "mocha": "^2.1.0",
+    "power-assert": "^0.10.2"
+  },
+  "peerDependencies": {
+    "grunt": ">=0.4.0"
+  },
+  "files": [
+    "tasks"
+  ]
+}
