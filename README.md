@@ -30,11 +30,9 @@ $ npm install grunt grunt-jsforce-deploy --save-dev
 
 ```javascript
 module.exports = function(grunt) {
-
   grunt.loadNpmTasks("grunt-jsforce-deploy");
 
   grunt.initConfig({
-
     jsforce_deploy: {
       test: {
         expand: true,
@@ -49,11 +47,9 @@ module.exports = function(grunt) {
 //        pollInterval: 10*1000,  // set polling interval to 10sec (default is 5sec)
       }
     }
-    
   });
 
   grunt.registerTask("deploy", [ "jsforce_deploy" ]);
-
 };
 ```
 
