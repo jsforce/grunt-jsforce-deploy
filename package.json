@@ -1,13 +1,25 @@
 {
+  "author": "Shinichi Tomita <shinichi.tomita@gmail.com>",
   "name": "grunt-jsforce-deploy",
+  "description": "A grunt task for deploying Salesforce package using JSforce (no Migration Tool dependency)",
+  "keywords": [
+    "salesforce",
+    "salesforce.com",
+    "sfdc",
+    "force.com",
+    "database.com",
+    "grunt",
+    "deploy"
+  ],
   "version": "1.0.0",
-  "description": "Salesforce package deploying tool using jsforce, no need to install migration tool",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsforce/grunt-jsforce-deploy.git"
+  },
   "scripts": {
     "pretest": "grunt deploy",
     "test": "mocha test/jsforce-deploy.test.js --require intelli-espower-loader"
   },
-  "author": "Shinichi Tomita <shinichi.tomita@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "archiver": "^0.14.3",
