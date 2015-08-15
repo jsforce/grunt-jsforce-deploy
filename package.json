@@ -20,6 +20,9 @@
     "pretest": "grunt deploy",
     "test": "mocha test/jsforce-deploy.test.js --require intelli-espower-loader"
   },
+  "files": [
+    "tasks"
+  ],
   "license": "MIT",
   "dependencies": {
     "archiver": "^0.14.3",
