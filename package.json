@@ -11,7 +11,7 @@
     "grunt",
     "deploy"
   ],
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/jsforce/grunt-jsforce-deploy.git"
@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "archiver": "^0.14.3",
-    "jsforce-metadata-tools": "^1.0.1"
+    "jsforce-metadata-tools": "^1.1.0"
   },
   "devDependencies": {
     "espower-loader": "^0.10.0",
@@ -38,8 +38,5 @@
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
-  },
-  "files": [
-    "tasks"
-  ]
+  }
 }
